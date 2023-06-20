@@ -15,7 +15,16 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-
+      new HtmlWebpackPlugin({
+        template: './src/index.html'
+      }),
+      new WebpackPwaManifest({
+        // Your manifest configurations here...
+      }),
+      new InjectManifest({
+        swSrc: './src/sw.js',
+        swDest: 'sw.js',
+      }),
     ],
 
     module: {
