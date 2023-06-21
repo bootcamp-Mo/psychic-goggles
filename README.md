@@ -1,5 +1,4 @@
 # psychic-goggles
-19 Progressive Web Applications (PWA): Text Editor
 
 ## Your Task
 
