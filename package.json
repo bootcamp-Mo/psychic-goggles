@@ -1,14 +1,14 @@
 {
-  "name": "jate",
+  "name": "JATE",
   "version": "1.0.0",
-  "description": "## 19 Progressive Web Applications (PWA): Text Editor",
+  "description": "19 Progressive Web Applications (PWA): Text Editor",
   "main": "server.js",
   "scripts": {
-    "start:dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "npm run build && npm run server",
-    "server": "node server/server.js",
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server nodemon server.js --ignore client",
     "build": "cd client && npm run build",
-    "install": "cd client && npm install",
+    "install": "cd server && npm i && cd ../client && npm i",
     "client": "cd client && npm start"
   },
   "keywords": [],
@@ -20,8 +20,9 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
-    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.1",
     "nodemon": "^2.0.4",
-    "style-loader": "^3.3.3"
+    "webpack": "^5.86.0",
+    "webpack-cli": "^5.1.4"
   }
 }
