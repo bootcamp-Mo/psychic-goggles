@@ -37,6 +37,6 @@
   "display": "standalone",
   "start_url": "/",
   "description": "A text editor",
-  "background_color": "#2196f3",
-  "theme_color": "#00bcd4"
+  "background_color": "#3c3f3e",
+  "theme_color": "#61a38a"
 }
