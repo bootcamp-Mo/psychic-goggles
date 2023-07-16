@@ -16,19 +16,23 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './src/index.html',
+        template: './index.html',
         title: 'JATE'
+      }),
+      new InjectManifest({
+        swSrc: './src/src-sw.js',
+        swDest: 'src-sw.js',
       }),
       new WebpackPwaManifest({
         fingerprints: false,
-        inject: false,
+        inject: true,
         name: 'Just Another Text Editor',
         short_name: 'JATE',
         description: 'A simple text editor with syntax highlighting.',
         background_color: '#2196f3',
         theme_color: '#00bcd4',
-        start_url: './',
-        publicPath: './',
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -36,10 +40,6 @@ module.exports = () => {
             destination: path.join('assets', 'icons'),
           }
         ],
-      }),
-      new InjectManifest({
-        swSrc: './src/src-sw.js',
-        swDest: 'src-sw.js',
       }),
     ],
 
