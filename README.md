@@ -5,6 +5,8 @@
 
 Psychic-goggles is a web-based text editor that runs as a Progressive Web Application (PWA). This means it can be used offline and installed on your device like a native app. It uses a number of data persistence techniques to ensure your data is always saved and available, even if your internet connection isn't.
 
+![ahhhh](https://github.com/bootcamp-Mo/psychic-goggles/assets/122568039/c72fe0da-384c-4001-9ff5-83a53427aa43)
+
 ## Table of Contents
 
 1. [Description](#description)
